@@ -1,0 +1,32 @@
+### Register user
+
+POST http://localhost:8088/api/v1/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+     "firstName": "Marcin",
+     "lastName": "Mikowski",
+     "email": "m.mikowski@wp.pl",
+     "password": "password01"
+}
+
+### Activate user
+GET http://localhost:8088/api/v1/auth/activate-account?token=024229
+
+### Authenticate - get JWT token
+POST http://localhost:8088/api/v1/auth/authenticate
+Content-Type: application/json
+Accept: application/json
+
+{
+     "email": "m.mikowski@wp.pl",
+     "password": "password01"
+}
+
+### Get AI story
+GET http://localhost:8088/api/v1/story
+Content-Type: application/json
+Accept: application/json
+Authorization: "Bearer eyJhbGciOiJIUzM4NCJ9.eyJmdWxsTmFtZSI6Ik1hcmNpbiBNaWtvd3NraSIsInN1YiI6Im0ubWlrb3dza2lAd3AucGwiLCJpYXQiOjE3MTUwMTY5MTksImV4cCI6MTcxNTEwMzMxOSwiYXV0aG9yaXRpZXMiOlsiVVNFUiJdfQ.xMJg32Ni6gX41j0zIMwWm5kKJo5jKJNxW8MUOkV32FPRIFBBhPYhYpDtXoP1rYzz"
+
